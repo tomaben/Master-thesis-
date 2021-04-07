@@ -1,0 +1,1516 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <WORKSPACE
+#    Command-line to run this workspace:
+#        "C:\Program Files\FME_2020.1.2.1\fme.exe" "C:\Users\tomben1\OneDrive - Malmö stad\Documents\Master_thesis\Script\CityGML_LOD1\KristallenNSLOD01_to_citygmllod1.1.fmw"
+#              --DestDataset_CITYGML "C:\Users\tomben1\OneDrive - Malmö stad\Documents\Master_thesis\Script\CityGML_LOD1\output_script\Kristallen_LOD1.1.gml"
+#              --SourceDataset_GEOJSON "C:\Users\tomben1\OneDrive - Malmö stad\Documents\Master_thesis\Data\Kristallen_Lund\Kristallen_NS_LOD_01.json"
+#    
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   BEGIN_PYTHON=""
+#!   BEGIN_TCL=""
+#!   CATEGORY=""
+#!   DESCRIPTION=""
+#!   DESTINATION="NONE"
+#!   DESTINATION_ROUTING_FILE=""
+#!   DOC_EXTENTS="6795.9 650.896"
+#!   DOC_TOP_LEFT="-1938.03 -1308.66"
+#!   END_PYTHON=""
+#!   END_TCL=""
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   FME_BUILD_NUM="20624"
+#!   FME_DOCUMENT_GUID="7e705408-70c5-45bd-b59e-02a8d1c75b94"
+#!   FME_DOCUMENT_PRIORGUID="4338475b-fc6d-47cb-8495-2100ba3795e5,a45b1b7f-6283-44e7-bde3-bd95d9ac16fd,567354fd-f710-4738-9c5b-1362a2a48d09,844882c6-ba62-4e14-b992-c2ec60d8200d,6012cd77-db86-49bf-8b51-2da4069e4a0c,292e3057-282c-45c5-80cc-809723e24dab,ccd4ad1a-d1d9-44fe-a20a-bbefd89bd47c,c0a5fd98-e5e3-4ba1-a1b1-dde4d7fff80f,f9a3936e-132b-467a-acdd-19eef8534073"
+#!   FME_GEOMETRY_HANDLING="Enhanced"
+#!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#!   FME_REPROJECTION_ENGINE="FME"
+#!   FME_SERVER_SERVICES=""
+#!   FME_STROKE_MAX_DEVIATION="0"
+#!   HISTORY=""
+#!   IGNORE_READER_FAILURE="No"
+#!   LAST_SAVE_BUILD="FME(R) 2020.1.2.1 (20200909 - Build 20624 - WIN64)"
+#!   LAST_SAVE_DATE="2021-03-15T13:37:14"
+#!   LOG_FILE=""
+#!   LOG_MAX_RECORDED_FEATURES="200"
+#!   MARKDOWN_DESCRIPTION=""
+#!   MARKDOWN_USAGE=""
+#!   MAX_LOG_FEATURES="200"
+#!   MULTI_WRITER_DATASET_ORDER="BY_ID"
+#!   PASSWORD=""
+#!   PYTHON_COMPATIBILITY="37"
+#!   REDIRECT_TERMINATORS="NONE"
+#!   SAVE_ON_PROMPT_AND_RUN="Yes"
+#!   SHOW_ANNOTATIONS="true"
+#!   SHOW_INFO_NODES="true"
+#!   SOURCE="NONE"
+#!   SOURCE_ROUTING_FILE=""
+#!   TERMINATE_REJECTED="YES"
+#!   TITLE=""
+#!   USAGE=""
+#!   USE_MARKDOWN=""
+#!   VIEW_POSITION="-2124.04 78.1258"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   WORKSPACE_VERSION="1"
+#!   ZOOM_SCALE="64"
+#! >
+#! <DATASETS>
+#! <DATASET
+#!   IS_SOURCE="true"
+#!   ROLE="READER"
+#!   FORMAT="GEOJSON"
+#!   DATASET="$(SourceDataset_GEOJSON)"
+#!   KEYWORD="GEOJSON_2"
+#!   MULTI_GEOM_ALLOWED="false"
+#!   ATTR_MAX_LENGTH="0"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="fme_geometry string fme_dataset string fme_sweep_angle float fme_type string multi_reader_keyword string fme_text_string string multi_reader_id int fme_text_size float fme_basename string fme_primary_axis float fme_secondary_axis float fme_feature_type string fme_fill_color string multi_reader_full_id int fme_color string fme_start_angle float fme_rotation float multi_reader_type string"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILE"
+#!   FTTR_TYPE="LISTBOX_ENCODED"
+#!   GENERATE_FME_BUILD_NUM="20624"
+#!   COORDSYS="EPSG:3008"
+#!   FEATURE_TYPES=""
+#!   MAX_FEATURES=""
+#!   MAX_FEATURES_PER_FEATURE_TYPE=""
+#!   MIN_FEATURES=""
+#!   START_FEATURE=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="json file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="MIME_TYPE"
+#!   VALUE="application/geo+json ADD_DISPOSITION"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the GeoJSON file(s) or type the GeoJSON URL"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a name for the GeoJSON file"
+#! />
+#! </DATASET>
+#! <DATASET
+#!   IS_SOURCE="false"
+#!   ROLE="WRITER"
+#!   FORMAT="CITYGML"
+#!   DATASET="$(DestDataset_CITYGML)"
+#!   KEYWORD="CITYGML_1"
+#!   MULTI_GEOM_ALLOWED="true"
+#!   ATTR_MAX_LENGTH="500"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="citygml_wrap_mode xml_char(16) fme_dataset xml_char(50) fme_fill_color xml_char(50) citygml_lod_name xml_buffer gml_parent_id xml_buffer citygml_shininess xml_real64 citygml_image_uri xml_buffer citygml_target{}.coordinate_list{}.ring xml_buffer fme_type xml_char(50) citygml_target{}.uri xml_buffer citygml_diffuse_color xml_buffer citygml_border_color xml_buffer fme_feature_type xml_char(50) citygml_mime_type xml_buffer citygml_target{}.world_to_texture_matrix xml_buffer citygml_theme xml_buffer citygml_is_smooth xml_boolean citygml_specular_color xml_buffer fme_primary_axis xml_real64 fme_text_size xml_real64 citygml_level_of_detail xml_ubyte gml_id xml_buffer citygml_ambient_intensity xml_real64 citygml_library_object xml_buffer citygml_transformation_matrix xml_buffer citygml_texture_type xml_char(16) citygml_target{}.coordinate_list{}.coordinates xml_buffer fme_secondary_axis xml_real64 citygml_emissive_color xml_buffer citygml_target xml_buffer fme_color xml_char(50) fme_basename xml_char(50) fme_text_string xml_char(50) fme_geometry xml_char(50) citygml_transparency xml_real64 citygml_is_front xml_boolean fme_rotation xml_real64 fme_start_angle xml_real64 citygml_orientation_matrix xml_buffer fme_sweep_angle xml_real64 citygml_prefer_world_file xml_boolean"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS="[]=%~!@$&amp;#[^?*&apos;+()\\/&quot;:"
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILE_OR_URL"
+#!   FTTR_TYPE=""
+#!   GENERATE_FME_BUILD_NUM="20620"
+#!   COORDSYS="EPSG:3008"
+#!   FANOUT_EXPRESSION="&lt;Unused&gt;"
+#!   FANOUT_GROUP="NO"
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="ADVANCED_PARMS"
+#!   VALUE="TEXTURE_DIRECTORY THEME_NAME"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="CityGML file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the CityGML file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_ADD_FEATURE_TYPE_DEFAULT"
+#!   VALUE="import"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a name for the CityGML file"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="boolean"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="float"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="float"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_char(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_char(width)"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_char(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_char(width)"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_buffer"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_buffer"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_buffer"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_xml"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_datetime"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_date"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_time"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_int64"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_uint64"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_int32"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_uint32"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_int16"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_uint16"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_byte"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_ubyte"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_real32"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_real64"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_decimal(width,decimal)"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_boolean"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_char(20)"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_char(8)"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_char(12)"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_geometry"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="citygml_uri"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="citygml_uri"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="citygml_csv"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="citygml_xml_string"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="CITYGML"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="citygml_date"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="CITYGML"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_point"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_line"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_polygon"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_text"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_ellipse"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_arc"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_rectangle"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_rounded_rectangle"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_raster"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_no_geom"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_collection"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_line"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_line"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_polygon"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json_no_geom"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_no_geom"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="CITYGML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_point"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="CITYGML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_line"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="CITYGML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_area"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="CITYGML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_aggregate"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="CITYGML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_text"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="CITYGML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_area"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="CITYGML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_area"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="CITYGML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_area"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="CITYGML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_arc"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="CITYGML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_surface"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="CITYGML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_solid"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="CITYGML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_mesh"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="CITYGML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_raster"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="CITYGML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_area"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="CITYGML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_area"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="CITYGML"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="xml_no_geom"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="CITYGML"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="Building"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="8"
+#!   FEAT_GEOMTYPE="All"
+#!   POSITION="4403.8710634019917 -717.7646215351042"
+#!   BOUNDING_RECT="4403.8710634019917 -717.7646215351042 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="CITYGML_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="0"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="citygml_lod_name" ATTR_TYPE="xml_char(200)"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="citygml_feature_role" ATTR_TYPE="xml_char(200)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="gml_id" ATTR_TYPE="xml_char(200)"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="Kristallen_NS_LOD_01_footprint [GEOJSON]"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="33"
+#!   FEAT_GEOMTYPE="json_polygon"
+#!   POSITION="-1938.0273927739283 -737.93471684716826"
+#!   BOUNDING_RECT="-1938.0273927739283 -737.93471684716826 958.00106825772946 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="GEOJSON_2"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="objektsidentitet" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BY_namn" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BYD_ändamål" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GeoNS_LOD0_planläge" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Geometriredovisning_Ytgeometri_Koordinatsystem_i_plan" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Geometriredovisning_Ytgeometri_Höjdsystem" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Geometriredovisning_lägesbestämningsmeetod_i_plan_konvertering_variant" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Geometriredovisning_lägesbestämningsmeetod_i_höjd_konvertering_variant" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Geometriredovisning_följer_mätanvisningar" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Variant_NS_LOD" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! <READER_DATASETS>
+#! <DATASET
+#!   NAME="GEOJSON_2"
+#!   OVERRIDE="-GEOJSON_2_DATASET"
+#!   DATASET="GEOJSON_2/Kristallen_NS_LOD_01.json"
+#! />
+#! </READER_DATASETS>
+#! <WRITER_DATASETS>
+#! <DATASET
+#!   NAME="CITYGML_1"
+#!   OVERRIDE="-CITYGML_1_DATASET"
+#!   DATASET="CITYGML_1/Kristallen_LOD1.1.gml"
+#! />
+#! </WRITER_DATASETS>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI FILENAME DestDataset_CITYGML CityGML_Files(*.gml;*.xml)|*.gml;*.xml|CityGML_Files(*.gml)|*.gml|CityGML_Files(*.xml)|*.xml|All_Files|* Destination CityGML Document:"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)output_script\Kristallen_LOD1.1.gml"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI FILE_OR_URL SourceDataset_GEOJSON GeoJSON_Documents(*.json;*.geojson)|*.json;*.geojson|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Source GeoJSON File or URL:"
+#!   DEFAULT_VALUE="C:\Users\tomben1\OneDrive - Malmö stad\Documents\Master_thesis\Data\Kristallen_Lund\Kristallen_NS_LOD_01.json"
+#!   IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="6"
+#!   TYPE="CityGMLGeometrySetter"
+#!   VERSION="4"
+#!   POSITION="3731.2101516076896 -717.7646215351042"
+#!   BOUNDING_RECT="3731.2101516076896 -717.7646215351042 508.00106825772946 71"
+#!   ORDER="500000000000005"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20624"
+#! >
+#!     <OUTPUT_FEAT NAME="Output"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="citygml_lod_name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="citygml_feature_role" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="gml_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="GEOM" PARM_VALUE="lod1Solid"/>
+#!     <XFORM_PARM PARM_NAME="ROLE" PARM_VALUE="cityObjectMember"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="CityGMLGeometrySetter"/>
+#!     <XFORM_PARM PARM_NAME="__COMPOUND_PARAMETERS" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="17"
+#!   TYPE="Extruder"
+#!   VERSION="4"
+#!   POSITION="-511.98428650953122 -657.7646215351042"
+#!   BOUNDING_RECT="-511.98428650953122 -657.7646215351042 454 71"
+#!   ORDER="500000000000002"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20624"
+#! >
+#!     <OUTPUT_FEAT NAME="EXTRUDED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="objektsidentitet" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BY_namn" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BYD_ändamål" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="GeoNS_LOD0_planläge" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_Ytgeometri_Koordinatsystem_i_plan" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_Ytgeometri_Höjdsystem" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_lägesbestämningsmeetod_i_plan_konvertering_variant" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_lägesbestämningsmeetod_i_höjd_konvertering_variant" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_följer_mätanvisningar" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Variant_NS_LOD" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="objektsidentitet" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BY_namn" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BYD_ändamål" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="GeoNS_LOD0_planläge" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_Ytgeometri_Koordinatsystem_i_plan" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_Ytgeometri_Höjdsystem" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_lägesbestämningsmeetod_i_plan_konvertering_variant" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_lägesbestämningsmeetod_i_höjd_konvertering_variant" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_följer_mätanvisningar" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Variant_NS_LOD" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="DIRECTION" PARM_VALUE="Auto"/>
+#!     <XFORM_PARM PARM_NAME="DISTANCE" PARM_VALUE="27.46"/>
+#!     <XFORM_PARM PARM_NAME="EXTRUSION_X" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="EXTRUSION_Y" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="EXTRUSION_Z" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Extruder_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="23"
+#!   TYPE="Aggregator"
+#!   VERSION="15"
+#!   POSITION="1412.0511575486121 -717.7646215351042"
+#!   BOUNDING_RECT="1412.0511575486121 -717.7646215351042 454 71"
+#!   ORDER="500000000000010"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20817"
+#! >
+#!     <OUTPUT_FEAT NAME="AGGREGATE"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="objektsidentitet" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BY_namn" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BYD_ändamål" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="GeoNS_LOD0_planläge" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_Ytgeometri_Koordinatsystem_i_plan" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_Ytgeometri_Höjdsystem" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_lägesbestämningsmeetod_i_plan_konvertering_variant" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_lägesbestämningsmeetod_i_höjd_konvertering_variant" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_följer_mätanvisningar" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Variant_NS_LOD" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.issue_found" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.location_sample.x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.location_sample.y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.location_sample.z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ACCUM_ATTRS_NAME" PARM_VALUE="Use Attributes From One Feature"/>
+#!     <XFORM_PARM PARM_NAME="AGGREGATE_TYPE" PARM_VALUE="Homogeneous Collection (If Possible)"/>
+#!     <XFORM_PARM PARM_NAME="ASSEMBLE_HIERARCHY_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ASSEMBLE_ONE_LEVEL_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_ACCUM_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TO_TRAIT" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="AV" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="CHILD_ID_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="CONCAT_ATTRS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="COUNT_ATTR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="CYCLE_ID_ERROR_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GENERATE_LIST_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="GEOM_NAME_FIELD" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="ID_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="ID_SELECTION" PARM_VALUE="ID and Parent ID"/>
+#!     <XFORM_PARM PARM_NAME="LIST_ATTRS_TO_INCLUDE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="LIST_ATTRS_TO_INCLUDE_MODE" PARM_VALUE="Selected Attributes"/>
+#!     <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MODE" PARM_VALUE="Geometry - Assemble One Level"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARENT_ID_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PRESERVE_ID" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="SEP" PARM_VALUE=","/>
+#!     <XFORM_PARM PARM_NAME="SUM" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="WEIGHT" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Aggregator"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="25"
+#!   TYPE="GeometryValidator"
+#!   VERSION="6"
+#!   POSITION="571.80430839265637 -717.7646215351042"
+#!   BOUNDING_RECT="571.80430839265637 -717.7646215351042 454 71"
+#!   ORDER="500000000000044"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20620"
+#! >
+#!     <OUTPUT_FEAT NAME="PASSED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="objektsidentitet" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BY_namn" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BYD_ändamål" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="GeoNS_LOD0_planläge" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_Ytgeometri_Koordinatsystem_i_plan" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_Ytgeometri_Höjdsystem" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_lägesbestämningsmeetod_i_plan_konvertering_variant" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_lägesbestämningsmeetod_i_höjd_konvertering_variant" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_följer_mätanvisningar" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Variant_NS_LOD" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="FAILED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="objektsidentitet" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BY_namn" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BYD_ändamål" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="GeoNS_LOD0_planläge" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_Ytgeometri_Koordinatsystem_i_plan" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_Ytgeometri_Höjdsystem" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_lägesbestämningsmeetod_i_plan_konvertering_variant" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_lägesbestämningsmeetod_i_höjd_konvertering_variant" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_följer_mätanvisningar" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Variant_NS_LOD" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.issue_found" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.location_sample.x" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.location_sample.y" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.location_sample.z" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.repair_state" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <OUTPUT_FEAT NAME="REPAIRED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="2"/>
+#!     <XFORM_ATTR ATTR_NAME="objektsidentitet" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="BY_namn" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="BYD_ändamål" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="GeoNS_LOD0_planläge" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_Ytgeometri_Koordinatsystem_i_plan" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_Ytgeometri_Höjdsystem" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_lägesbestämningsmeetod_i_plan_konvertering_variant" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_lägesbestämningsmeetod_i_höjd_konvertering_variant" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_följer_mätanvisningar" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="Variant_NS_LOD" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.issue_found" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.location_sample.x" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.location_sample.y" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.location_sample.z" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <OUTPUT_FEAT NAME="ISSUE_LOCATIONS"/>
+#!     <FEAT_COLLAPSED COLLAPSED="3"/>
+#!     <XFORM_ATTR ATTR_NAME="objektsidentitet" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="BY_namn" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="BYD_ändamål" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="GeoNS_LOD0_planläge" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_Ytgeometri_Koordinatsystem_i_plan" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_Ytgeometri_Höjdsystem" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_lägesbestämningsmeetod_i_plan_konvertering_variant" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_lägesbestämningsmeetod_i_höjd_konvertering_variant" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_följer_mätanvisningar" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="Variant_NS_LOD" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="count" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="details" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="issue_found" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <OUTPUT_FEAT NAME="INVALID_PARTS"/>
+#!     <FEAT_COLLAPSED COLLAPSED="4"/>
+#!     <XFORM_ATTR ATTR_NAME="objektsidentitet" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="BY_namn" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="BYD_ändamål" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="GeoNS_LOD0_planläge" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_Ytgeometri_Koordinatsystem_i_plan" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_Ytgeometri_Höjdsystem" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_lägesbestämningsmeetod_i_plan_konvertering_variant" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_lägesbestämningsmeetod_i_höjd_konvertering_variant" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_följer_mätanvisningar" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="Variant_NS_LOD" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.count" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.issue_found" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.location_sample.x" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.location_sample.y" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.location_sample.z" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.supplementary_info{}" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="5"/>
+#!     <XFORM_ATTR ATTR_NAME="objektsidentitet" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="BY_namn" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="BYD_ändamål" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="GeoNS_LOD0_planläge" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_Ytgeometri_Koordinatsystem_i_plan" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_Ytgeometri_Höjdsystem" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_lägesbestämningsmeetod_i_plan_konvertering_variant" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_lägesbestämningsmeetod_i_höjd_konvertering_variant" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_följer_mätanvisningar" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="Variant_NS_LOD" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="5" />
+#!     <XFORM_PARM PARM_NAME="ISSUE_ATTR_NAME" PARM_VALUE="_issues"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PRESETS" PARM_VALUE="Custom"/>
+#!     <XFORM_PARM PARM_NAME="REPAIR" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="RULES" PARM_VALUE="PLANAR_SURFACE CHECK_AREA]DO_NOT_CHECK_AREA]TOLERANCE_MODE]AUTO]TOLERANCE]0.0]ANGULAR_TOLERANCE_MODE]Automatic]ANGULAR_TOLERANCE]0.0]FME_CONTROLLER_QUERY_FILE]transformers&lt;solidus&gt;dependencies&lt;solidus&gt;geometryvalidator&lt;solidus&gt;PLANAR_SURFACE.fme"/>
+#!     <XFORM_PARM PARM_NAME="SUMMARY" PARM_VALUE="Detailed"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="GeometryValidator_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="28"
+#!   TYPE="AttributeCreator"
+#!   VERSION="9"
+#!   POSITION="2027.9523782892156 -717.7646215351042"
+#!   BOUNDING_RECT="2027.9523782892156 -717.7646215351042 454 71"
+#!   ORDER="500000000000045"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20624"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="gml_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="citygml_level_of_detail" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="objektsidentitet" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BY_namn" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BYD_ändamål" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="GeoNS_LOD0_planläge" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_Ytgeometri_Koordinatsystem_i_plan" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_Ytgeometri_Höjdsystem" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_lägesbestämningsmeetod_i_plan_konvertering_variant" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_lägesbestämningsmeetod_i_höjd_konvertering_variant" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Geometriredovisning_följer_mätanvisningar" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Variant_NS_LOD" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.issue_found" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.location_sample.x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.location_sample.y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_issues{}.location_sample.z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; gml_id SET_TO gml_&lt;at&gt;UUID&lt;openparen&gt;&lt;closeparen&gt;  citygml_level_of_detail SET_TO 1"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="30"
+#!   TYPE="AttributeKeeper"
+#!   VERSION="3"
+#!   POSITION="2615.7668984097236 -717.7646215351042"
+#!   BOUNDING_RECT="2615.7668984097236 -717.7646215351042 454 71"
+#!   ORDER="500000000000046"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20817"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="gml_id" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="CREATE_BULK_MODE_FEATURES" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="KEEP_ATTRS" PARM_VALUE="citygml_level_of_detial,gml_id"/>
+#!     <XFORM_PARM PARM_NAME="KEEP_LIST" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_ON_ATTRIBUTE_CHANGE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeKeeper"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="29"
+#!   TYPE="Orientor"
+#!   VERSION="3"
+#!   POSITION="3731.3700383048422 -1237.6604866436123"
+#!   BOUNDING_RECT="3731.3700383048422 -1237.6604866436123 454 71"
+#!   ORDER="500000000000006"
+#!   PARMS_EDITED="false"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20620"
+#! >
+#!     <OUTPUT_FEAT NAME="ORIENTED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="FLIP_APPEARANCES_CHOICE" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="KIND" PARM_VALUE="REVERSE"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Orientor"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="18"
+#!   SOURCE_NODE="33"
+#!   TARGET_NODE="17"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="9"
+#!   SOURCE_NODE="6"
+#!   TARGET_NODE="8"
+#!   SOURCE_PORT_DESC="fo 0 Output"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="20"
+#!   SOURCE_NODE="17"
+#!   TARGET_NODE="25"
+#!   SOURCE_PORT_DESC="fo 0 EXTRUDED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="24"
+#!   SOURCE_NODE="23"
+#!   TARGET_NODE="28"
+#!   SOURCE_PORT_DESC="fo 0 AGGREGATE"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="26"
+#!   SOURCE_NODE="25"
+#!   TARGET_NODE="23"
+#!   SOURCE_PORT_DESC="fo 0 PASSED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="31"
+#!   SOURCE_NODE="28"
+#!   TARGET_NODE="30"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="32"
+#!   SOURCE_NODE="30"
+#!   TARGET_NODE="6"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 Input"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="27"
+#!   SOURCE_NODE="25"
+#!   TARGET_NODE="23"
+#!   SOURCE_PORT_DESC="fo 2 REPAIRED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0,0,0,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+
+FME_PYTHON_VERSION 37
+GUI IGNORE SourceDataset_GEOJSON_2,GEOJSON_IN_USE_SEARCH_ENVELOPE_GEOJSON_2,GEOJSON_IN_SEARCH_ENVELOPE_MINX_GEOJSON_2,GEOJSON_IN_SEARCH_ENVELOPE_MINY_GEOJSON_2,GEOJSON_IN_SEARCH_ENVELOPE_MAXX_GEOJSON_2,GEOJSON_IN_SEARCH_ENVELOPE_MAXY_GEOJSON_2,GEOJSON_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEOJSON_2,GEOJSON_IN_CLIP_TO_ENVELOPE_GEOJSON_2,GEOJSON_IN_NETWORK_AUTHENTICATION_GEOJSON_2,DestDataset_CITYGML_1,CITYGML_OUT_FME_GROUP_NAMED1_CITYGML_1,CITYGML_OUT_VERSION_CITYGML_1,CITYGML_OUT_USE_CITYGML_SCHEMA_FILES_CITYGML_1,CITYGML_OUT_ADE_CITYGML_1,CITYGML_OUT_ADD_NAMESPACE_PREFIX_TO_FEATURE_TYPES_CITYGML_1,CITYGML_OUT_ADE_XSD_DOC_CITYGML_1,CITYGML_OUT_MAX_ATTRIBUTES_PER_NESTED_ATTRIBUTE_CITYGML_1,CITYGML_OUT_FME_GROUP_NAMED2_CITYGML_1,CITYGML_OUT_DOCUMENT_ENCODING_CITYGML_1,CITYGML_OUT_HEADER_COMMENTS_CITYGML_1,CITYGML_OUT_SCHEMA_LOCATION_CITYGML_1,CITYGML_OUT_RESTRICT_CURVES_TO_POLYLINES_CITYGML_1,CITYGML_OUT_REMOVE_AUTO_GENERATED_IDS_WHEN_POSSIBLE_CITYGML_1,CITYGML_OUT_USE_CORE_NAMESPACE_PREFIX_CITYGML_1,CITYGML_OUT_TEXTURE_DIRECTORY_CITYGML_1,CITYGML_OUT_THEME_NAME_CITYGML_1,CITYGML_OUT_FME_GROUP_NAMED3_CITYGML_1,CITYGML_OUT_CITYGML_VALIDATION_CITYGML_1,CITYGML_OUT_FME_GROUP_NAMED4_CITYGML_1,CITYGML_OUT_TEXTURE_OUTPUT_FORMAT_CITYGML_1,CITYGML_OUT_FME_GROUP_NAMED5_CITYGML_1,CITYGML_OUT_USE_XLINK_HREF_GEOMETRY_TRAITS_CITYGML_1,CITYGML_OUT_FME_GROUP_NAMED6_CITYGML_1,CITYGML_OUT_SRS_NAME_CITYGML_1,CITYGML_OUT_SRS_AXIS_ORDER_CITYGML_1,CITYGML_OUT_PRETTY_PRINT_SETTINGS_CITYGML_1,CITYGML_OUT_PRETTY_PRINT_CITYGML_1,CITYGML_OUT_INDENT_SIZE_CITYGML_1,CITYGML_OUT_REPLACE_TABS_WITH_SPACES_CITYGML_1
+DEFAULT_MACRO DestDataset_CITYGML $(FME_MF_DIR)output_script\Kristallen_LOD1.1.gml
+GUI FILENAME DestDataset_CITYGML CityGML_Files(*.gml;*.xml)|*.gml;*.xml|CityGML_Files(*.gml)|*.gml|CityGML_Files(*.xml)|*.xml|All_Files|* Destination CityGML Document:
+DEFAULT_MACRO SourceDataset_GEOJSON C:\Users\tomben1\OneDrive - Malmö stad\Documents\Master_thesis\Data\Kristallen_Lund\Kristallen_NS_LOD_01.json
+GUI FILE_OR_URL SourceDataset_GEOJSON GeoJSON_Documents(*.json;*.geojson)|*.json;*.geojson|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Source GeoJSON File or URL:
+INCLUDE [ if {{$(DestDataset_CITYGML)} == {}} { puts_real {Parameter 'DestDataset_CITYGML' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SourceDataset_GEOJSON)} == {}} { puts_real {Parameter 'SourceDataset_GEOJSON' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE MULTI_READER
+MULTI_READER_TYPE{0} GEOJSON
+MULTI_READER_KEYWORD{0} GEOJSON_2
+MULTI_READER_GEN_DIRECTIVES{0} FLATTEN_MODE,ALL_LEVELS,SEARCH_ENVELOPE_MINY,0,SEARCH_ENVELOPE_COORDINATE_SYSTEM,,USE_BASENAME_AS_DEFAULT_FEATURE_TYPE,Yes,CLIP_TO_ENVELOPE,NO,SEARCH_ENVELOPE_MINX,0,EXPOSE_ATTRS_GROUP,,_MERGE_SCHEMAS,YES,SEARCH_ENVELOPE_MAXX,0,SEARCH_ENVELOPE_MAXY,0,USE_SEARCH_ENVELOPE,NO,GEOJSON_EXPOSE_FORMAT_ATTRS,
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} CITYGML
+MULTI_WRITER_KEYWORD{0} CITYGML_1
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "GEOJSON_2"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER GEOJSON GEOJSON_2
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_GEOJSON_2 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER GEOJSON GEOJSON_2
+DEFAULT_MACRO SourceDataset_GEOJSON_2 $(SourceDataset_GEOJSON)
+GUI FILE_OR_URL SourceDataset_GEOJSON_2 GeoJSON_Documents(*.json;*.geojson)|*.json;*.geojson|All_Files|* Source GeoJSON File or URL:
+DEFAULT_MACRO GEOJSON_IN_FLATTEN_MODE_GEOJSON_2 ALL_LEVELS
+GEOJSON_2_FLATTEN_MODE "$(GEOJSON_IN_FLATTEN_MODE_GEOJSON_2)"
+DEFAULT_MACRO GEOJSON_IN_EXPOSE_ATTRS_GROUP_GEOJSON_2 
+GEOJSON_2_EXPOSE_ATTRS_GROUP "$(GEOJSON_IN_EXPOSE_ATTRS_GROUP_GEOJSON_2)"
+DEFAULT_MACRO GEOJSON_IN_USE_BASENAME_AS_DEFAULT_FEATURE_TYPE_GEOJSON_2 Yes
+GEOJSON_2_USE_BASENAME_AS_DEFAULT_FEATURE_TYPE "$(GEOJSON_IN_USE_BASENAME_AS_DEFAULT_FEATURE_TYPE_GEOJSON_2)"
+# Include this file in source setting section to add external search envelope processing
+# Zero as a default means we don't do any search -- this makes workbench happier
+DEFAULT_MACRO GEOJSON_IN_USE_SEARCH_ENVELOPE_GEOJSON_2 NO
+GEOJSON_2_USE_SEARCH_ENVELOPE "$(GEOJSON_IN_USE_SEARCH_ENVELOPE_GEOJSON_2)"
+GUI ACTIVEDISCLOSUREGROUP GEOJSON_IN_USE_SEARCH_ENVELOPE_GEOJSON_2 GEOJSON_IN_SEARCH_ENVELOPE_MINX_GEOJSON_2%GEOJSON_IN_SEARCH_ENVELOPE_MINY_GEOJSON_2%GEOJSON_IN_SEARCH_ENVELOPE_MAXX_GEOJSON_2%GEOJSON_IN_SEARCH_ENVELOPE_MAXY_GEOJSON_2%GEOJSON_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEOJSON_2%GEOJSON_IN_CLIP_TO_ENVELOPE_GEOJSON_2%GEOJSON_IN_SEARCH_METHOD%GEOJSON_IN_SEARCH_METHOD_FILTER%GEOJSON_IN_SEARCH_ORDER%GEOJSON_IN_SEARCH_FEATURE%GEOJSON_IN_DUMMY_SEARCH_ENVELOPE_PARAMETER Use Search Envelope
+# ===========================================================================
+GUI LOOKUP GEOJSON_IN_SEARCH_ENVELOPE_MINX_GEOJSON_2 <Unused>,0 
+DEFAULT_MACRO GEOJSON_IN_SEARCH_ENVELOPE_MINX_GEOJSON_2 0
+GEOJSON_2_SEARCH_ENVELOPE "$(GEOJSON_IN_SEARCH_ENVELOPE_MINX_GEOJSON_2)"
+GUI OPTIONAL FLOAT GEOJSON_IN_SEARCH_ENVELOPE_MINX_GEOJSON_2 Minimum X:
+# ===========================================================================
+GUI LOOKUP GEOJSON_IN_SEARCH_ENVELOPE_MINY_GEOJSON_2 <Unused>,0 
+DEFAULT_MACRO GEOJSON_IN_SEARCH_ENVELOPE_MINY_GEOJSON_2 0
+GEOJSON_2_SEARCH_ENVELOPE "$(GEOJSON_IN_SEARCH_ENVELOPE_MINY_GEOJSON_2)"
+GUI OPTIONAL FLOAT GEOJSON_IN_SEARCH_ENVELOPE_MINY_GEOJSON_2 Minimum Y:
+# ===========================================================================
+GUI LOOKUP GEOJSON_IN_SEARCH_ENVELOPE_MAXX_GEOJSON_2 <Unused>,0 
+DEFAULT_MACRO GEOJSON_IN_SEARCH_ENVELOPE_MAXX_GEOJSON_2 0
+GEOJSON_2_SEARCH_ENVELOPE "$(GEOJSON_IN_SEARCH_ENVELOPE_MAXX_GEOJSON_2)"
+GUI OPTIONAL FLOAT GEOJSON_IN_SEARCH_ENVELOPE_MAXX_GEOJSON_2 Maximum X:
+# ===========================================================================
+GUI LOOKUP GEOJSON_IN_SEARCH_ENVELOPE_MAXY_GEOJSON_2 <Unused>,0 
+DEFAULT_MACRO GEOJSON_IN_SEARCH_ENVELOPE_MAXY_GEOJSON_2 0
+GEOJSON_2_SEARCH_ENVELOPE "$(GEOJSON_IN_SEARCH_ENVELOPE_MAXY_GEOJSON_2)"
+GUI OPTIONAL FLOAT GEOJSON_IN_SEARCH_ENVELOPE_MAXY_GEOJSON_2 Maximum Y:
+# ===========================================================================
+GUI LOOKUP GEOJSON_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEOJSON_2 <Unused>, 
+DEFAULT_MACRO GEOJSON_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEOJSON_2 
+GEOJSON_2_SEARCH_ENVELOPE "$(GEOJSON_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEOJSON_2)"
+GUI OPTIONAL COORDSYS GEOJSON_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEOJSON_2 Search Envelope Coordinate System:
+# ===========================================================================
+# BUG18999: We now have a soft clip to fall back on like native spatial index
+# thus we are reintroducing the clip to envelop as an option for users.
+# Defualt to soft clip as per the existing database readers we are emulating
+GUI LOOKUP GEOJSON_IN_CLIP_TO_ENVELOPE_GEOJSON_2 <Unused>,NO 
+DEFAULT_MACRO GEOJSON_IN_CLIP_TO_ENVELOPE_GEOJSON_2 NO
+GEOJSON_2_CLIP_TO_ENVELOPE "$(GEOJSON_IN_CLIP_TO_ENVELOPE_GEOJSON_2)"
+GUI OPTIONAL CHECKBOX GEOJSON_IN_CLIP_TO_ENVELOPE_GEOJSON_2 YES%NO Clip to Search Envelope
+# ===========================================================================
+DEFAULT_MACRO GEOJSON_IN_NETWORK_AUTHENTICATION_GEOJSON_2 
+GEOJSON_2_NETWORK_AUTHENTICATION "$(GEOJSON_IN_NETWORK_AUTHENTICATION_GEOJSON_2)"
+GUI OPTIONAL AUTHENTICATOR GEOJSON_IN_NETWORK_AUTHENTICATION_GEOJSON_2 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# ============================================================================ 
+DEFAULT_MACRO GEOJSON_IN_ATTRIBUTE_READING_GEOJSON_2 ALL
+GEOJSON_2_ATTRIBUTE_READING "$(GEOJSON_IN_ATTRIBUTE_READING_GEOJSON_2)"
+# ============================================================================ 
+GEOJSON_2_GENERATE_FME_BUILD_NUM 20624
+GEOJSON_2_DATASET "$(SourceDataset_GEOJSON_2)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "CITYGML_1"
+#! END_WB_HEADER
+#! START_DEST_HEADER CITYGML CITYGML_1
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_CITYGML_1 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER CITYGML CITYGML_1
+DEFAULT_MACRO DestDataset_CITYGML_1 $(DestDataset_CITYGML)
+GUI FILENAME DestDataset_CITYGML_1 CityGML_Files(*.gml;*.xml)|*.gml;*.xml|CityGML_Files(*.gml)|*.gml|CityGML_Files(*.xml)|*.xml|All_Files|* Destination CityGML Document:
+DEFAULT_MACRO CITYGML_OUT_FME_GROUP_NAMED1_CITYGML_1 
+GUI OPTIONAL DISCLOSUREGROUP CITYGML_OUT_FME_GROUP_NAMED1_CITYGML_1 CITYGML_OUT_VERSION_CITYGML_1%CITYGML_OUT_USE_CITYGML_SCHEMA_FILES_CITYGML_1%CITYGML_OUT_ADE_CITYGML_1%CITYGML_OUT_ADD_NAMESPACE_PREFIX_TO_FEATURE_TYPES_CITYGML_1%CITYGML_OUT_ADE_XSD_DOC_CITYGML_1%CITYGML_OUT_MAX_ATTRIBUTES_PER_NESTED_ATTRIBUTE_CITYGML_1 CityGML Schema Options
+DEFAULT_MACRO CITYGML_OUT_VERSION_CITYGML_1 2.0
+CITYGML_1_VERSION "$(CITYGML_OUT_VERSION_CITYGML_1)"
+GUI ACTIVECHOICE CITYGML_OUT_VERSION_CITYGML_1 0.4,CITYGML_OUT_USE_CITYGML_SCHEMA_FILES_CITYGML_1,CITYGML_OUT_ADE_CITYGML_1%1.0%2.0 CityGML Version:
+DEFAULT_MACRO CITYGML_OUT_USE_CITYGML_SCHEMA_FILES_CITYGML_1 Yes
+CITYGML_1_USE_CITYGML_SCHEMA_FILES "$(CITYGML_OUT_USE_CITYGML_SCHEMA_FILES_CITYGML_1)"
+GUI LOOKUP_CHOICE CITYGML_OUT_USE_CITYGML_SCHEMA_FILES_CITYGML_1 "\"Yes (Recommended)\",Yes"%"\"No (Deprecated - Backward-compatible)\",No" Writer Driven by CityGML Schema
+DEFAULT_MACRO CITYGML_OUT_ADE_CITYGML_1 None
+CITYGML_1_ADE "$(CITYGML_OUT_ADE_CITYGML_1)"
+GUI ACTIVECHOICE CITYGML_OUT_ADE_CITYGML_1 "\"None\",CITYGML_OUT_ADE_XSD_DOC_CITYGML_1"%NoiseADE,CITYGML_OUT_ADE_XSD_DOC_CITYGML_1%Other Application Domain Extension
+DEFAULT_MACRO CITYGML_OUT_ADD_NAMESPACE_PREFIX_TO_FEATURE_TYPES_CITYGML_1 No
+CITYGML_1_ADD_NAMESPACE_PREFIX_TO_FEATURE_TYPES "$(CITYGML_OUT_ADD_NAMESPACE_PREFIX_TO_FEATURE_TYPES_CITYGML_1)"
+GUI CHOICE CITYGML_OUT_ADD_NAMESPACE_PREFIX_TO_FEATURE_TYPES_CITYGML_1 Yes%No Add XML Namespace Prefix to Feature Types:
+GUI LOOKUP CITYGML_OUT_ADE_XSD_DOC_CITYGML_1 <Unused>, 
+DEFAULT_MACRO CITYGML_OUT_ADE_XSD_DOC_CITYGML_1 
+CITYGML_1_ADE_XSD_DOC "$(CITYGML_OUT_ADE_XSD_DOC_CITYGML_1)"
+GUI OPTIONAL MULTIFILE CITYGML_OUT_ADE_XSD_DOC_CITYGML_1 ADE_Schema_File(*.xsd)|*.xsd|All_Files(*)|* ADE Schema File(s):
+# ============================================================================
+DEFAULT_MACRO CITYGML_OUT_MAX_ATTRIBUTES_PER_NESTED_ATTRIBUTE_CITYGML_1 400
+CITYGML_1_MAX_ATTRIBUTES_PER_NESTED_ATTRIBUTE "$(CITYGML_OUT_MAX_ATTRIBUTES_PER_NESTED_ATTRIBUTE_CITYGML_1)"
+GUI OPTIONAL INTEGER CITYGML_OUT_MAX_ATTRIBUTES_PER_NESTED_ATTRIBUTE_CITYGML_1 Max Atttributes Per Nested Attribute
+DEFAULT_MACRO CITYGML_OUT_FME_GROUP_NAMED2_CITYGML_1 
+GUI OPTIONAL DISCLOSUREGROUP CITYGML_OUT_FME_GROUP_NAMED2_CITYGML_1 CITYGML_OUT_DOCUMENT_ENCODING_CITYGML_1%CITYGML_OUT_HEADER_COMMENTS_CITYGML_1%CITYGML_OUT_SCHEMA_LOCATION_CITYGML_1%CITYGML_OUT_RESTRICT_CURVES_TO_POLYLINES_CITYGML_1%CITYGML_OUT_REMOVE_AUTO_GENERATED_IDS_WHEN_POSSIBLE_CITYGML_1%CITYGML_OUT_USE_CORE_NAMESPACE_PREFIX_CITYGML_1%CITYGML_OUT_TEXTURE_DIRECTORY_CITYGML_1%CITYGML_OUT_THEME_NAME_CITYGML_1 Output File Contents
+# ============================================================================
+DEFAULT_MACRO CITYGML_OUT_DOCUMENT_ENCODING_CITYGML_1 utf-8
+CITYGML_1_DOCUMENT_ENCODING "$(CITYGML_OUT_DOCUMENT_ENCODING_CITYGML_1)"
+GUI STRING_OR_ENCODING CITYGML_OUT_DOCUMENT_ENCODING_CITYGML_1 * Character Encoding:
+# ============================================================================
+DEFAULT_MACRO CITYGML_OUT_HEADER_COMMENTS_CITYGML_1 
+CITYGML_1_HEADER_COMMENTS "$(CITYGML_OUT_HEADER_COMMENTS_CITYGML_1)"
+GUI OPTIONAL TEXT_EDIT_XML CITYGML_OUT_HEADER_COMMENTS_CITYGML_1 Header Comments:
+# ============================================================================
+DEFAULT_MACRO CITYGML_OUT_SCHEMA_LOCATION_CITYGML_1 
+CITYGML_1_SCHEMA_LOCATION "$(CITYGML_OUT_SCHEMA_LOCATION_CITYGML_1)"
+GUI OPTIONAL TEXT_EDIT_ CITYGML_OUT_SCHEMA_LOCATION_CITYGML_1 xsi:schemaLocation:
+# ============================================================================
+DEFAULT_MACRO CITYGML_OUT_RESTRICT_CURVES_TO_POLYLINES_CITYGML_1 Yes
+CITYGML_1_RESTRICT_CURVES_TO_POLYLINES "$(CITYGML_OUT_RESTRICT_CURVES_TO_POLYLINES_CITYGML_1)"
+GUI LOOKUP_CHOICE CITYGML_OUT_RESTRICT_CURVES_TO_POLYLINES_CITYGML_1 "\"Yes (Recommended)\",Yes"%"\"No (Deprecated - Backward-compatible)\",No" Restrict Curves to Polylines
+# ============================================================================
+DEFAULT_MACRO CITYGML_OUT_REMOVE_AUTO_GENERATED_IDS_WHEN_POSSIBLE_CITYGML_1 Yes
+CITYGML_1_REMOVE_AUTO_GENERATED_IDS_WHEN_POSSIBLE "$(CITYGML_OUT_REMOVE_AUTO_GENERATED_IDS_WHEN_POSSIBLE_CITYGML_1)"
+GUI LOOKUP_CHOICE CITYGML_OUT_REMOVE_AUTO_GENERATED_IDS_WHEN_POSSIBLE_CITYGML_1 Yes%No Remove Auto Generated GML IDs When Possible:
+# ============================================================================
+DEFAULT_MACRO CITYGML_OUT_USE_CORE_NAMESPACE_PREFIX_CITYGML_1 Yes
+CITYGML_1_USE_CORE_NAMESPACE_PREFIX "$(CITYGML_OUT_USE_CORE_NAMESPACE_PREFIX_CITYGML_1)"
+GUI LOOKUP_CHOICE CITYGML_OUT_USE_CORE_NAMESPACE_PREFIX_CITYGML_1 Yes%No Use 'core' Namespace Prefix:
+# ============================================================================
+DEFAULT_MACRO CITYGML_OUT_TEXTURE_DIRECTORY_CITYGML_1 
+CITYGML_1_TEXTURE_DIRECTORY "$(CITYGML_OUT_TEXTURE_DIRECTORY_CITYGML_1)"
+GUI OPTIONAL TEXT CITYGML_OUT_TEXTURE_DIRECTORY_CITYGML_1 Texture subfolder
+# ============================================================================
+DEFAULT_MACRO CITYGML_OUT_THEME_NAME_CITYGML_1 FMETheme
+CITYGML_1_THEME_NAME "$(CITYGML_OUT_THEME_NAME_CITYGML_1)"
+GUI OPTIONAL TEXT CITYGML_OUT_THEME_NAME_CITYGML_1 Theme name
+DEFAULT_MACRO CITYGML_OUT_FME_GROUP_NAMED3_CITYGML_1 
+GUI OPTIONAL DISCLOSUREGROUP CITYGML_OUT_FME_GROUP_NAMED3_CITYGML_1 CITYGML_OUT_CITYGML_VALIDATION_CITYGML_1 Validation
+# ============================================================================
+DEFAULT_MACRO CITYGML_OUT_CITYGML_VALIDATION_CITYGML_1 No
+CITYGML_1_CITYGML_VALIDATION "$(CITYGML_OUT_CITYGML_VALIDATION_CITYGML_1)"
+GUI LOOKUP_CHOICE CITYGML_OUT_CITYGML_VALIDATION_CITYGML_1 Yes%No Validate Output File:
+DEFAULT_MACRO CITYGML_OUT_FME_GROUP_NAMED4_CITYGML_1 
+GUI OPTIONAL DISCLOSUREGROUP CITYGML_OUT_FME_GROUP_NAMED4_CITYGML_1 CITYGML_OUT_TEXTURE_OUTPUT_FORMAT_CITYGML_1 Texture
+# ============================================================================
+DEFAULT_MACRO CITYGML_OUT_TEXTURE_OUTPUT_FORMAT_CITYGML_1 NONE
+CITYGML_1_TEXTURE_OUTPUT_FORMAT "$(CITYGML_OUT_TEXTURE_OUTPUT_FORMAT_CITYGML_1)"
+GUI LOOKUP_CHOICE CITYGML_OUT_TEXTURE_OUTPUT_FORMAT_CITYGML_1 Auto,NONE%PNG,PNGRASTER%JPEG%GIF,GIFRASTER%BMP%ECW%ERDAS%GEOTIFF%INGR%JPEG2000%MRSID%PCIDSK%SGI%TIFF%XPM Preferred Texture Format:
+# ============================================================================
+DEFAULT_MACRO CITYGML_OUT_FME_GROUP_NAMED5_CITYGML_1 
+GUI OPTIONAL DISCLOSUREGROUP CITYGML_OUT_FME_GROUP_NAMED5_CITYGML_1 CITYGML_OUT_USE_XLINK_HREF_GEOMETRY_TRAITS_CITYGML_1 CityGML Options
+DEFAULT_MACRO CITYGML_OUT_USE_XLINK_HREF_GEOMETRY_TRAITS_CITYGML_1 Yes
+CITYGML_1_USE_XLINK_HREF_GEOMETRY_TRAITS "$(CITYGML_OUT_USE_XLINK_HREF_GEOMETRY_TRAITS_CITYGML_1)"
+GUI CHOICE CITYGML_OUT_USE_XLINK_HREF_GEOMETRY_TRAITS_CITYGML_1 Yes%No Use xlink_href Traits for Geometry References:
+# ============================================================================
+DEFAULT_MACRO CITYGML_OUT_FME_GROUP_NAMED6_CITYGML_1 FME_DISCLOSURE_OPEN
+GUI OPTIONAL DISCLOSUREGROUP CITYGML_OUT_FME_GROUP_NAMED6_CITYGML_1 CITYGML_OUT_SRS_NAME_CITYGML_1%CITYGML_OUT_SRS_AXIS_ORDER_CITYGML_1 SRS Parameters
+# ============================================================================
+# Overwrites the GML srsName with the specified value. When left unspecified
+# the FME coordinate system name for the input features will be used as the
+# value for the srsName in the GML document.
+DEFAULT_MACRO CITYGML_OUT_SRS_NAME_CITYGML_1 EPSG:3008
+CITYGML_1_SRS_NAME "$(CITYGML_OUT_SRS_NAME_CITYGML_1)"
+GUI OPTIONAL TEXT CITYGML_OUT_SRS_NAME_CITYGML_1 GML srsName:
+# ============================================================================
+# This keyword specifies the axis order for a coordinate tuple for the specified
+# SRS_NAME in the GML document. This keyword only applies when used conjunction
+# with the SRS_NAME keyword. The valid values for this keyword are 1,2, 2,1,
+# 1,2,3 and 2,1,3.
+DEFAULT_MACRO CITYGML_OUT_SRS_AXIS_ORDER_CITYGML_1 1,2,3
+CITYGML_1_SRS_AXIS_ORDER "$(CITYGML_OUT_SRS_AXIS_ORDER_CITYGML_1)"
+GUI OPTIONAL CHOICE CITYGML_OUT_SRS_AXIS_ORDER_CITYGML_1 1,2%2,1%1,2,3%2,1,3 GML SRS Axis Order:
+# ============================================================================
+DEFAULT_MACRO CITYGML_OUT_PRETTY_PRINT_SETTINGS_CITYGML_1 
+GUI OPTIONAL DISCLOSUREGROUP CITYGML_OUT_PRETTY_PRINT_SETTINGS_CITYGML_1 CITYGML_OUT_PRETTY_PRINT_CITYGML_1%CITYGML_OUT_INDENT_SIZE_CITYGML_1%CITYGML_OUT_REPLACE_TABS_WITH_SPACES_CITYGML_1 Pretty Printing
+DEFAULT_MACRO CITYGML_OUT_PRETTY_PRINT_CITYGML_1 No
+CITYGML_1_PRETTY_PRINT "$(CITYGML_OUT_PRETTY_PRINT_CITYGML_1)"
+GUI CHOICE CITYGML_OUT_PRETTY_PRINT_CITYGML_1 Yes%No Pretty Print:
+DEFAULT_MACRO CITYGML_OUT_INDENT_SIZE_CITYGML_1 1
+CITYGML_1_INDENT_SIZE "$(CITYGML_OUT_INDENT_SIZE_CITYGML_1)"
+GUI CHOICE CITYGML_OUT_INDENT_SIZE_CITYGML_1 0%1%2%3%4%5%6%7%8%9 Indent Size:
+DEFAULT_MACRO CITYGML_OUT_REPLACE_TABS_WITH_SPACES_CITYGML_1 No
+CITYGML_1_REPLACE_TABS_WITH_SPACES "$(CITYGML_OUT_REPLACE_TABS_WITH_SPACES_CITYGML_1)"
+GUI CHOICE CITYGML_OUT_REPLACE_TABS_WITH_SPACES_CITYGML_1 Yes%No Replace Tabs with Spaces:
+# ============================================================================
+# Opt in for destination dataset type vs format type validation
+DEFAULT_MACRO CITYGML_OUT_DESTINATION_DATASETTYPE_VALIDATION_CITYGML_1 Yes
+CITYGML_1_DESTINATION_DATASETTYPE_VALIDATION "$(CITYGML_OUT_DESTINATION_DATASETTYPE_VALIDATION_CITYGML_1)"
+DEFAULT_MACRO CITYGML_OUT_COORDINATE_SYSTEM_GRANULARITY_CITYGML_1 DATASET
+CITYGML_1_COORDINATE_SYSTEM_GRANULARITY "$(CITYGML_OUT_COORDINATE_SYSTEM_GRANULARITY_CITYGML_1)"
+# ============================================================================ 
+CITYGML_1_GENERATE_FME_BUILD_NUM 20620
+CITYGML_1_DATASET "$(DestDataset_CITYGML_1)"
+#! END_DEST_HEADER
+#! START_WB_HEADER
+#! END_WB_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)KristallenNSLOD01_to_citygmllod1.1.log"
+LOG_APPEND NO
+LOG_FILTER_MASK -1
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+DEFAULT_MACRO DATASET_KEYWORD_GEOJSON_2 GEOJSON_2
+DEFAULT_MACRO DATASET_KEYWORD_CITYGML_1 CITYGML_1
+# -------------------------------------------------------------------------
+
+GEOJSON_2_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+GEOJSON_2_COORDINATE_SYSTEM EPSG:3008
+CITYGML_1_COORDINATE_SYSTEM EPSG:3008
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME KristallenNSLOD01_to_citygmllod1.1
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+GEOJSON_2_DEF "Kristallen_NS_LOD_01_footprint [GEOJSON]"   objektsidentitet             string   BY_namn                      string   BYD_ändamål                  string   GeoNS_LOD0_planläge          string   Geometriredovisning_Ytgeometri_Koordinatsystem_i_plan string   Geometriredovisning_Ytgeometri_Höjdsystem string   Geometriredovisning_lägesbestämningsmeetod_i_plan_konvertering_variant string   Geometriredovisning_lägesbestämningsmeetod_i_höjd_konvertering_variant string   Geometriredovisning_följer_mätanvisningar string   Variant_NS_LOD               string
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   MULTI_READER_KEYWORD $(DATASET_KEYWORD_GEOJSON_2)   INPUT FEATURE_TYPE *    ROUTE GEOJSON "GEOJSON_2::Kristallen_NS_LOD_01_footprint [GEOJSON]" multi_reader_keyword,$(DATASET_KEYWORD_GEOJSON_2) TO FME_GENERIC "::Kristallen_NS_LOD_01_footprint [GEOJSON]" ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+GEOJSON_2_MERGE_DEF "GEOJSON_2::Kristallen_NS_LOD_01_footprint [GEOJSON]" EXACT Kristallen_NS_LOD_01_footprint<space><openbracket>GEOJSON<closebracket>
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Kristallen_NS_LOD_01_footprint [GEOJSON]_GEOJSON_2 Splitter"    INPUT FEATURE_TYPE "Kristallen_NS_LOD_01_footprint [GEOJSON]"    OUTPUT FEATURE_TYPE "Kristallen_NS_LOD_01_footprint [GEOJSON]_GEOJSON_2"
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+INCLUDE [          if { ({AUTO} == {SPECIFIED}) } {             puts {MACRO Extruder_2_func @GeometryType(REJECTABLE, fme_extrusion_exact,"<Unused>","<Unused>","<Unused>")};          } else {             puts {MACRO Extruder_2_func @GeometryType(REJECTABLE, fme_extrusion_exact,0.0,0.0,0.0,"27.46","AUTO")};          }          ]
+FACTORY_DEF * TeeFactory    FACTORY_NAME Extruder_2    INPUT  FEATURE_TYPE "Kristallen_NS_LOD_01_footprint [GEOJSON]_GEOJSON_2"    OUTPUT FEATURE_TYPE ___TOREJECTOR___         @RenameAttributes(FME_STRICT,___fme_rejection_code___,fme_rejection_code)         $(Extruder_2_func)
+FACTORY_DEF * TestFactory    FACTORY_NAME Extruder_2_Rejector    INPUT FEATURE_TYPE ___TOREJECTOR___    TEST @Value(fme_rejection_code) == ""    OUTPUT PASSED FEATURE_TYPE Extruder_2_EXTRUDED       @RenameAttributes(FME_STRICT,fme_rejection_code,___fme_rejection_code___)    OUTPUT FAILED FEATURE_TYPE Extruder_2_<REJECTED>       @RemoveAttributes(___fme_rejection_code___)
+DEFAULT_MACRO _WB_BYPASS_TERMINATION No
+FACTORY_DEF * TeeFactory FACTORY_NAME Extruder_2_<Rejected> INPUT FEATURE_TYPE Extruder_2_<REJECTED>  OUTPUT FAILED FEATURE_TYPE * @Abort(ENCODED, Extruder_2<space>output<space>a<space><lt>Rejected<gt><space>feature.<space><space>To<space>continue<space>translation<space>when<space>features<space>are<space>rejected<comma><space>change<space><apos>Workspace<space>Parameters<apos><space><gt><space>Translation<space><gt><space><apos>Rejected<space>Feature<space>Handling<apos><space>to<space><apos>Continue<space>Translation<apos>)
+# -------------------------------------------------------------------------
+FACTORY_DEF * GeometryValidationFactory    FACTORY_NAME GeometryValidator_2    INPUT  FEATURE_TYPE Extruder_2_EXTRUDED    ISSUE_ATTR_NAME "_issues"    REPAIR_MODE    VALIDATION_ISSUE PLANAR_SURFACE CHECK_AREA]DO_NOT_CHECK_AREA]TOLERANCE_MODE]AUTO]TOLERANCE]0.0]ANGULAR_TOLERANCE_MODE]Automatic]ANGULAR_TOLERANCE]0.0    REJECT_INVALID Yes    OUTPUT VALID FEATURE_TYPE GeometryValidator_2_PASSED    OUTPUT REPAIRED FEATURE_TYPE GeometryValidator_2_REPAIRED    OUTPUT REJECTED FEATURE_TYPE GeometryValidator_2_<REJECTED>
+DEFAULT_MACRO _WB_BYPASS_TERMINATION No
+FACTORY_DEF * TeeFactory FACTORY_NAME GeometryValidator_2_<Rejected> INPUT FEATURE_TYPE GeometryValidator_2_<REJECTED>  OUTPUT FAILED FEATURE_TYPE * @Abort(ENCODED, GeometryValidator_2<space>output<space>a<space><lt>Rejected<gt><space>feature.<space><space>To<space>continue<space>translation<space>when<space>features<space>are<space>rejected<comma><space>change<space><apos>Workspace<space>Parameters<apos><space><gt><space>Translation<space><gt><space><apos>Rejected<space>Feature<space>Handling<apos><space>to<space><apos>Continue<space>Translation<apos>)
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AggregateFactory    FACTORY_NAME Aggregator    INPUT  FEATURE_TYPE GeometryValidator_2_PASSED    INPUT  FEATURE_TYPE GeometryValidator_2_REPAIRED    MODE ONE_LEVEL    FLUSH_WHEN_GROUPS_CHANGE No    REMOVE_GEOMETRY NO    ACCUMULATE_ATTRIBUTES One    LIST_ATTRS_TO_INCLUDE { <Unused> }    LIST_ATTRS_TO_INCLUDE_MODE SELECTED    SEPARATOR ,    PRODUCE_MULTIS YES    PRESERVE_ID No    ATTR_TO_TRAIT Yes    OUTPUT AGGREGATE FEATURE_TYPE Aggregator_AGGREGATE
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME AttributeCreator    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE Aggregator_AGGREGATE    MULTI_FEATURE_MODE NO    NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV     ATTR_ACTION { "" "gml_id" "SET_TO" "gml_<at>UUID<openparen><closeparen>" }      ATTR_ACTION { "" "citygml_level_of_detail" "SET_TO" "1" }    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_OUTPUT
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttributeKeeperFactory    FACTORY_NAME AttributeKeeper    INPUT  FEATURE_TYPE AttributeCreator_OUTPUT    KEEP_ATTRS { citygml_level_of_detial,gml_id }    KEEP_LISTS {  }    KEEP_FME_ATTRIBUTES Yes    BUILD_FEATURE_TABLES { NO }    OUTPUT_ON_ATTRIBUTE_CHANGE { <Unused> }    OUTPUT { OUTPUT FEATURE_TYPE AttributeKeeper_OUTPUT        }
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory   FACTORY_NAME "CityGMLGeometrySetter Input Input Collector"   INPUT FEATURE_TYPE AttributeKeeper_OUTPUT   OUTPUT FEATURE_TYPE CityGMLGeometrySetter_Input
+MACRO CityGMLGeometrySetter_WORKSPACE_NAME CityGMLGeometrySetter
+MACRO $(CityGMLGeometrySetter_WORKSPACE_NAME)_XFORMER_NAME CityGMLGeometrySetter
+MACRO $(CityGMLGeometrySetter_WORKSPACE_NAME)_TRANSFORMER_GROUP 
+MACRO $(CityGMLGeometrySetter_WORKSPACE_NAME)___COMPOUND_PARAMETERS 
+MACRO $(CityGMLGeometrySetter_WORKSPACE_NAME)_GEOM lod1Solid
+MACRO $(CityGMLGeometrySetter_WORKSPACE_NAME)_ROLE cityObjectMember
+INCLUDE_CUSTOM_TRANSFORMER_VER CityGMLGeometrySetter:4
+FACTORY_DEF * TeeFactory   FACTORY_NAME "CityGMLGeometrySetter Output Output Renamer/Nuker"   INPUT FEATURE_TYPE CityGMLGeometrySetter_Output   OUTPUT FEATURE_TYPE CityGMLGeometrySetter_Output
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC CityGMLGeometrySetter_Output TO CITYGML __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>Building<closeparen> COORDINATE_SYSTEM EPSG:3008 GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+CITYGML_1_DEF Building   citygml_feature_role         xml_char(200)
